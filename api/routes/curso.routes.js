@@ -7,6 +7,12 @@ module.exports = (app) => {
     //GET All
     app.get('/cursos', curso.readAll);
 
-    //GET ById
+    //GET By Id
     app.get('/cursos/:cursoId', curso.readById);
+
+    // Update
+    app.put('/cursos/:cursoId', curso.update);
+
+    // Delete
+    app.delete('/cursos/:cursoId', curso.delete);
 }
