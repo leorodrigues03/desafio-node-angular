@@ -2,6 +2,15 @@
 const express = require('express');
 const app = express();
 
+const bodyParser = require('body-parser');
+
+// parse requests
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//Routes
+require('./routes/curso.routes.js')(app);
+
 // Configuring the database
 const config = require('./config.js');
 const mongoose = require('mongoose');
