@@ -1,0 +1,1 @@
+const Curso = require('./curso.model.js');
