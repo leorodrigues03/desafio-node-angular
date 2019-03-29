@@ -1,7 +1,7 @@
 # node-angular
 
 Este repositório contém dois projetos: 
-1. - uma api em NodeJS e MongoDB que representa um CRUD simples (pasta `api`; 
+1. - uma api em NodeJS e MongoDB que representa um CRUD simples (pasta `api`); 
 2. - uma aplicação simples em Angular 7 que consome a api do item 1 (pasta `front`).
 
 
