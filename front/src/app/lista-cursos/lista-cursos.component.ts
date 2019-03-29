@@ -29,11 +29,12 @@ export class ListaCursosComponent implements OnInit {
   }
 
   deleteCurso(curso: CursoModel){
-    
-    this.cursoService.deleteCurso(curso._id).subscribe(data=>{
-      console.log(data);
-      this.getAllCursos();
-    });
+    if (confirm('Deseja excluir?')) {
+      this.cursoService.deleteCurso(curso._id).subscribe(data=>{
+        console.log(data);
+        this.getAllCursos();
+      });
+    }
   }
 
   updateCurso(curso: CursoModel){
