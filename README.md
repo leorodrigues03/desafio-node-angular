@@ -7,9 +7,9 @@ Este repositório contém dois projetos:
 
 ## API
 
-Para executar a api, acesse o diretório `api`, instale as depenências com `nmp install` e execute `npm start`. Importante configurar o acesso ao banco (usuário e senha) dentro de config.js para persistir os dados.
+Para executar a api, acesse o diretório `api`, instale as depenências com `npm install` e execute `npm start`. Importante configurar o acesso ao banco (usuário e senha) dentro de config.js para persistir os dados.
 
 
 ## FRONT (Aplicação Angular)
 
-Com a API executando, abra um novo terminal, acesse o diretório `front`, instale as depenências com `nmp install` e execute `npm start`. Uma janela do seu browser abrirá com a tela inicial. 
+Com a API executando, abra um novo terminal, acesse o diretório `front`, instale as depenências com `npm install` e execute `npm start`. Uma janela do seu browser abrirá com a tela inicial. 
