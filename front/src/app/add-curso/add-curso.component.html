@@ -1,0 +1,50 @@
+<div class="col-md-12">
+  <button (click)="voltar()" class="btn btn-info">Voltar</button>
+  <br /><br />
+  <h4>Adicionar</h4>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Título:</label>
+      <input type="text" formControlName="titulo" placeholder="Título" class="form-control" 
+             [ngClass]="{ 'is-invalid': submitted && f.titulo.errors }">
+      <div *ngIf="submitted && f.titulo.errors">
+        <div *ngIf="f.titulo.errors.required">Titulo é obrigatório</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Descrição:</label>
+      <input type="text" formControlName="descricao" placeholder="Descrição" class="form-control" 
+             [ngClass]="{ 'is-invalid': submitted && f.descricao.errors }">
+      <div *ngIf="submitted && f.descricao.errors">
+        <div *ngIf="f.descricao.errors.required">Descrição é obrigatório</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Preço ($):</label>
+      <input type="text" formControlName="preco" placeholder="Preço" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.preco.errors }">
+      <div *ngIf="submitted && f.preco.errors">
+        <div *ngIf="f.preco.errors.required">Preço é obrigatório</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label>Início:</label>
+        <input type="date" formControlName="inicio" placeholder="Início" class="form-control" 
+               [ngClass]="{ 'is-invalid': submitted && f.inicio.errors }">
+        <div *ngIf="submitted && f.inicio.errors">
+          <div *ngIf="f.inicio.errors.required">Início é obrigatório ou está inválida!</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label>Fim:</label>
+      <input type="date" formControlName="fim" placeholder="Fim" class="form-control" 
+             [ngClass]="{ 'is-invalid': submitted && f.fim.errors }">
+    </div>
+
+    <button type="submit" class="btn btn-info">Salvar</button>
+  </form>
+</div>

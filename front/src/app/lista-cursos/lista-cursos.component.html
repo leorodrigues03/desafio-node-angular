@@ -1,0 +1,36 @@
+<div class="container col-md-12"> 
+  <div>
+      <button (click)="addCurso()" class="btn btn-info">Adicionar Curso</button>
+  </div>
+  <br /> 
+  <h4>Todos</h4>  
+  <div class="table-responsive table-container">  
+    <table class="table table-dark table-hover table-striped">  
+      <thead class="thead-light">  
+        <tr>  
+          <th>Titulo</th>  
+          <th>Descricao</th> 
+          <th>Preço</th> 
+          <th>Data Início</th>
+          <th>Data Fim</th>
+          <th></th>
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let curso of cursos"> 
+          
+          <td>{{curso.titulo}}</td>  
+          <td>{{curso.descricao}}</td>
+          <td>{{curso.preco | currency : "USD" : true}}</td> 
+          <td>{{curso.inicio | date:'dd/MM/yyyy'}}</td> 
+          <td>{{curso.fim | date:'dd/MM/yyyy'}}</td>  
+          <td>  
+            <button (click)="deleteCurso(curso)" class="btn btn-info"> Excluir</button>  
+            <button (click)="updateCurso(curso)" style="margin-left: 20px;" class="btn btn-info"> Editar</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div> 
+ 
+</div>
